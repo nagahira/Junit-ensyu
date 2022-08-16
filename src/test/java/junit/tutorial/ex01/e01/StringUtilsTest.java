@@ -27,8 +27,23 @@ class StringUtilsTest {
 	}
 
 	@Test
-	void testToSnakeCase() {
-		fail("Not yet implemented");
+	void testToSnakeCase1() {
+		String text = StringUtils.toSnakeCase("aaa");
+		assertEquals("aaa", text,"TC1:テストケースが一致しません");
+	}
+	
+
+	@Test
+	void testToSnakeCase2() {
+		String text = StringUtils.toSnakeCase("HelloWorld");
+		assertEquals("hello_world", text,"TC2:テストケースが一致しません");
+	}
+	
+
+	@Test
+	void testToSnakeCase3() {
+		String text = StringUtils.toSnakeCase("practiceJunit");
+		assertEquals("practice_junit", text,"TC3:テストケースが一致しません");
 	}
 
 }
